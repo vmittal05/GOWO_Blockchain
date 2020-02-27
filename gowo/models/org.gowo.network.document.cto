@@ -1,0 +1,83 @@
+namespace org.gowo.network.document
+
+asset Document identified by documentID {
+  o String documentID
+  o String documentName
+  o String documentHash
+  o String AssignedTo
+  o String AssignedFrom
+  o String SigningAuthority
+  o String relatedTPA optional
+  o DateTime creationDate
+  o Status statusType default = "NEW"
+  o isVerified verifiedType default = "UNVERIFIED"
+}
+
+enum Status {
+  o FINISHED
+  o PROCESSING
+  o NEW
+}
+
+enum isVerified {
+  o UNVERIFIED
+  o VERIFIED
+}
+
+transaction CreateDocument {
+  o String documentID
+  o DateTime creationDate
+  o String documentName
+  o String documentHash
+  o String AssignedTo
+  o String relatedTPA
+  o String AssignedFrom
+  o String SigningAuthority
+  o Status statusType default = "NEW"
+  o isVerified verifiedType default = "UNVERIFIED"
+}
+
+event DocumentCreated {
+  o String documentID
+  o String AssignedTo
+}
+
+transaction ChangeAssignedStatus {
+  o String documentID
+  o String AssignedTo
+  o String AssignedFrom
+}
+
+event AssignedChanged {
+  o String documentID
+  o String AssignedTo
+}
+
+transaction getDocument {
+  o String documentID
+}
+
+event documentRequested {
+  o String documentID
+  o String documentHash
+}
+
+transaction updateHash {
+  o String documentID
+  o String documentHash
+}
+
+event hashChanged {
+  o String documentID
+}
+
+transaction verifiedStatusChange {
+  o String documentID
+  o isVerified verifiedType
+  o String relatedTPA
+}
+
+event verifiedDoc {
+  o String documentID
+  o String relatedTPA
+}

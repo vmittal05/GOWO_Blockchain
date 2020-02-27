@@ -1,0 +1,49 @@
+namespace org.gowo.network.participants
+import org.gowo.network.powerPlant.PowerPlant
+
+
+abstract participant GOWOParticipant identified by participantKey {
+  o String participantKey
+  o String PublicKey
+  o Contact personalDetails
+}
+
+participant GOWONetworkAdmins extends GOWOParticipant {
+
+}
+
+concept Contact {
+  o String fname
+  o String lname
+  o String email
+}
+
+participant GOWOFinanceMinistry extends GOWOParticipant {
+  o String OfficerID
+  o String post
+  o String batch
+  o String department
+}
+
+participant GOWOHomeMinistry extends GOWOParticipant {
+  o String OfficerID
+  o String post
+  o String batch
+  o String department
+}
+
+participant ICICIBank extends GOWOParticipant {
+  o String AuthorityID
+  o String Branch
+  o String Position
+  o String TokenID
+}
+
+participant ThirdPartOrg extends GOWOParticipant {
+  o String tpaID
+  o String orgName 
+  o DateTime dateOfIssue
+  o Integer tenderValue
+  o String location
+  o String tenderNotice
+}

@@ -1,0 +1,62 @@
+namespace org.gowo.network.powerPlant
+import org.gowo.network.document.Document
+import org.gowo.network.participants.*
+
+asset PowerPlant identified by PPJID {
+  o String PPJID
+  o String tenderDescription
+  o String jobName
+  o JobType jobType default = "SERVICING"
+  o JobStatus jobStatus default = "NEW"
+  o DateTime jobDeadline
+  o String extraNotes
+  o String[] DocumentID
+  o String[] Officers
+        --> GOWOHomeMinistry[] user
+  o String[] TPA
+        --> ThirdPartOrg[] tpaList
+}
+
+concept AuthorityValidation {
+  o String[] DocumentID --> Document document
+  o isAllVerified status default = "UNVERIFIED"
+}
+
+enum isAllVerified {
+  o UNVERIFIED
+  o VERIFIED
+}
+
+enum JobType {
+  o SERVICING
+  o CONSTRUCTION
+  o UPGRADATION
+}
+
+enum JobStatus {
+  o FINISHED
+  o PROCESSING
+  o NEW
+}
+
+transaction createPlantJob {
+  o String tenderDescription
+  o String jobName
+  o JobType jobType 
+  o JobStatus jobStatus
+  o DateTime jobDeadline
+  o String extraNotes
+  o String OfficerID
+  o String tpaID
+}
+
+event jobCreated {
+  o String PPJID
+  o String DocumentID
+  o String OfficerID
+}
+
+transaction addOfficers {
+  o String OfficerID
+  o String PPJID
+}

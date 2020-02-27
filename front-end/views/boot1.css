@@ -1,0 +1,21 @@
+form{
+	margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+
+.form1{
+	background-image: url(loc.png);
+height: 575px;
+width: 100%;
+left: 451px;
+right: 898px;
+padding-left: 560px;
+padding-top: 225px;
+margin-top: -12px;}
+
+.forgot{
+color: aliceblue;
+font-size: 14px;
+margin-left: 11px;
+}

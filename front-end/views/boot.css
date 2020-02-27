@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:400,500|Oswald');
+@import url('https://fonts.googleapis.com/css?family=BenchNine');
+
+h1{
+   font-size:80px;
+   font-family: 'BenchNine', sans-serif;
+}
+}
+.about p{
+  font-family: 'Oswald', sans-serif;
+}
+
+.team{
+	margin-top:0%;
+	background:#eee;
+	width:100%;
+	height:500px;
+}
+
+
+.h2a{
+  background-color:black;
+  height:40px;
+  margin-top:0px;
+  padding:0px 600px 50px 550px ; 
+  color:white;
+  font-family: 'Oswald', sans-serif;
+  font-size:45px;
+
+}
+.team div{
+	margin:20px;
+	box-sizing: border-box;
+	float: left;
+	width: 20%;
+	height : 50%;
+}
+
+.team img{
+	width: 100%;
+	height: 100%;
+	margin-top:39px;
+	padding:1px;
+   border: 3px solid white;
+    box-shadow: 1px 11px 10px  grey;
+
+}
+
+.team .im1{
+	margin-left: 80px;
+}
+
+.team h4{
+	margin-top:17px;
+	text-align: center;
+}
+
+.team p{
+	width: 100%;
+	word-wrap: break-word;
+}
+
+
+.d1{
+	padding-left: 200px;
+}
+
+.contact{
+	background-image: url(loc.png);
+	width: 100%;
+	height:800px;
+	padding-top: 80px;
+	padding-left: 80px;
+	padding-right: 80px;
+}
+.con1{
+	background-color:  #600080;
+	width:100%;
+	height:600px;
+	padding-top: 20px;
+}
+
+.con1 h1{
+	font-family: 'BenchNine', sans-serif;
+    font-size: 90px;
+}
+
+.con2{
+	padding:40px;
+	color:#fff;
+}
+
+.con3{
+	margin-left:-30px;
+}
+
+.con4{
+	font-family: 'BenchNine', sans-serif;
+	font-size:20px;
+}
+.con4 h2{
+	font-family: 'BenchNine', sans-serif;
+	font-size:40px !important;
+}
+
+#leave{
+		font-family: 'BenchNine', sans-serif;
+	font-size:40px !important;
+	margin-right: 60px;
+}
+ul li a:hover{
+	color:#29d4b6 !important;
+}
+
+.footer{
+	background-color: white;
+	width: 100%;
+	height:70px;
+}
+
+.footer h5{
+	margin-top: 3px;
+	margin-left:2px;
+	float:left;
+    font-size: 18px;
+}
+#face{
+	margin-top: 5px;
+	margin-right: 5px;
+    float:right;
+}
+li{
+	list-style: none;
+}
+
+.nav li{
+	font-size: 20px;
+}
+
+
+
+li span{
+	font-weight: bold;
+}
+
+.leav input{
+	margin-bottom: 20px !important;
+    margin-left: 230px;
+    width: 383px;
+}
+
+.leav textarea{
+	margin-bottom: 20px !important;
+    margin-left: 230px;
+    width: 383px;
+    height: 100px;
+}
+
+/*============================our services=================================*/
+
+.service{
+	margin-top:0%;
+	background:#000;
+	width:100%;
+	height:500px;
+}
+
+.service-img{
+	width:80%;
+	height: 100%;
+	margin-left: 143px;
+	padding-top: 33px;
+}
+
+.service img
+{
+  float:left;
+}
+
+.service .service-img div{
+	width:25%;
+	height: 100%;
+	float: left;
+}
+
+.service div img{
+	margin-top: 56px;
+}
